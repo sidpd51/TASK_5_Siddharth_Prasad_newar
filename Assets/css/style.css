@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    /* body colors  */
+
+    --color-green-primary: #4CAF4F;
+    --color-green-secondary: #bef1c0;
+    --color-white-primary: #ffffff;
+    --color-white-secondary: #F5F7FA;
+
+    /* colors for navigation bar */
+
+    --color-nav-brand: #263238;
+    --color-nav-link: #18191F;
+
+    /* hero section  */
+
+    --color-primary-heading: #4D4D4D;
+    --color-primary-text: #717171;
+    --color-secondary-text: #89939E;
+
+    /* footer  */
+
+    --color-footer-bg: #263238;
+
+    /* width  */
+    --container-width: 100%;
+
+    /* font-weight  */
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+
+    /* font-size */
+    --fs-14: 0.875rem;
+    --fs-16: 1rem;
+    --fs-20: 1.25rem;
+    --fs-28: 1.75rem;
+    --fs-36: 2.25rem;
+    --fs-64: 4rem;
+
+}
+
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: var(--fw-regular);
+  background-color: var(--color-white-secondary);
+}
+
+.container {
+  width: var(--container-width);
+}
+
+/* hero container  */
+
+.hero-info {
+  width: 55%
+}
+
+.hero-img {
+  width: 40%
+}
+
+.hero-heading-black {
+  font-size: var(--fs-64);
+  color: var(--color-primary-heading);
+}
+
+.hero-heading-green {
+  font-size: var(--fs-64);
+  color: var(--color-green-primary);
+}
+
+/* .carousel-control-prev, 
+.carousel-control-next {
+  width: 10%;
+} */
+
+/* .carousel-icon {
+  background-image: none;
+} */
+
+/* .carousel-indicators-modified {
+  border-radius: 50%;
+  width: 0.5rem !important;
+  height: 0.5rem !important;
+  background-color: var(--color-green-secondary) !important;
+}
+ */
