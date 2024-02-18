@@ -41,6 +41,7 @@
     --fw-bold: 700;
 
     /* font-size */
+    --fs-10: 0.5rem;
     --fs-10: 0.625rem;
     --fs-12: 0.75rem;
     --fs-14: 0.875rem;
@@ -230,17 +231,21 @@ body {
 
 .feature-container {
   width: 80%;
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 
 .feature-header {
   font-size: var(--fs-20) ;
   color: var(--color-heading-primary);
+  text-align: left;
+  margin-left: 8px;
 }
 
 .feature-paragraph {
   color: var(--color-text-primary);
   margin-bottom: 2rem;
+  text-align: left;
+  margin-left: 8px;
 }
 
 .feature-cards {
@@ -256,7 +261,7 @@ body {
 .card {
   padding: 1.5rem 0rem;
   box-shadow: 3px 3px 10px var(--color-shadow-secondary);
-  width: 70% !important;
+  width: 95% !important;
 }
 
 .card:hover {
@@ -264,11 +269,15 @@ body {
 }
 
 .card-title {
-  font-size: var(--fs-14);
+  font-size: var(--fs-16);
+}
+
+.card-text {
+  font-size: var(--fs-12);
 }
 
 
-/* about-section  */
+/*! about-section  */
 
 .about-us {
   background-color: var(--color-white-primary);
@@ -356,7 +365,7 @@ body {
   color: var(--color-green-secondary);
 }
 
-/* product showcase  */
+/*^ product showcase  */
 
 .product-showcase {
   padding: 2rem 0;
@@ -411,7 +420,7 @@ body {
 
 .cta {
   padding: 2rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 .cta-container {
@@ -427,7 +436,10 @@ body {
 
 .cta-btn {
   font-size: var(--fs-16);
+  text-align: left;
 }
+
+
 
 /*^ footer section  */
 
@@ -454,7 +466,7 @@ body {
 }
 
 .copyright-list {
-  width: 50%;
+  width: 40%;
   /* margin: 0 auto; */
   font-size: 0.875rem;
   display: flex;
@@ -514,9 +526,188 @@ body {
 
 
 
-/* ^ large screen  */
 
-@media only screen and (min-width: 768px){
+
+
+
+
+
+
+
+/* ^ tab screen  */
+
+@media (min-width: 576px) and (max-width: 767px){
+
+  .btn {
+    padding-inline: 0.5rem;
+    padding-block: 0.2rem;
+    font-size: var(--fs-12);
+    border-radius: 0.25rem;
+    margin-top: 0;
+  }
+
+  /*^ feature  */
+  .feature-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .feature-cards {
+    flex-direction: row;
+  }
+
+  .feature-header {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .feature-paragraph {
+    text-align: center;
+    padding-top: 0.35rem;
+  }
+
+  .card-title {
+    font-size: var(--fs-14);
+  }
+  
+  .card {
+    padding: 1rem 0;
+  }
+
+  .card-text {
+    font-size: var(--fs-10);
+  }
+
+
+  /*^ about us section  */
+
+  .about-us {
+    padding-block: 2rem;
+  }
+
+  .about-us-container {
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-us-heading {
+  width: 100%;
+  }
+
+  .about-us-img {
+    width: 40%;
+    margin-left: 0;
+  }
+
+  .about-us-info {
+    width: 58%;
+  }
+
+  /*^ client showcase  */
+  .client-showcase {
+    padding: 1.5rem 0;
+  }
+
+  .client-showcase-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .client-showcase-img {
+    width: 42%;
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .client-showcase-info {
+    width: 55%;
+  }
+
+  .client-showcase-info-paragraph {
+    margin-bottom: 0.5rem;
+  }
+
+  .client-showcase-info-title{
+    margin-bottom: 0.25rem;
+  }
+
+  .client-showcase-info-subtitle{
+    margin-bottom: 0rem;
+  }
+
+  /*^ product showcase  */
+
+  .product-showcase {
+    text-align: center;
+
+  }
+
+  .product-showcase-container {
+    width: 90%;
+  }
+
+  .product-showcase-info-heading {
+    margin-bottom: 0.65rem;
+  }
+
+  .product-showcase-cards {
+    flex-direction: row !important;
+    justify-content: space-between;
+  }
+
+  .product-showcase-info-paragraph {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .product-card {
+    width: 10rem !important;
+    padding: 0.25rem !important;
+    margin-bottom: 3rem;
+  }
+
+  .product-card-body {
+    padding: 0.5rem;
+    width: 130px;
+    left: 15px;
+    margin-bottom: 0;
+  }
+
+  .product-card-title {
+    font-size: var(--fs-8);
+  }
+
+  .product-card-paragraph {
+    font-size: var(--fs-8);
+  }
+
+  /* cta  */
+
+  .cta {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .cta-heading {
+    margin-bottom: 1.25rem;
+  }
+
+  /* footer section  */
+
+  .footer-container {
+    width: ;
+  }
+}
+
+
+/*^ large screens  */
+
+@media (min-width: 768px){
 
   body {
     font-size: var(--fs-16);
