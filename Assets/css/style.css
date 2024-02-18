@@ -416,7 +416,7 @@ body {
   font-size: var(--fs-14);
 }
 
-/* cta section  */
+/*^ cta section  */
 
 .cta {
   padding: 2rem 0;
@@ -451,6 +451,11 @@ body {
   font-size: var(--fs-10);
 }
 
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .copyright-list, 
 .help-list {
   list-style: none;
@@ -475,11 +480,10 @@ body {
 
 .copyright {
   /* text-align: center; */
-  width: 80%;
-  margin: 0 auto;
 }
+
 .help {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .copyright-text {
@@ -491,16 +495,15 @@ body {
 }
 
 .help {
-  width: 80%;
-  margin: 0 auto 1.5rem;
+  /* width: 80%;
+  margin: 0 auto 1.5rem; */
   justify-content: space-between;
 }
 
 .newsletter {
-  /* text-align: center; */
-  margin: 0 auto 1.5rem;
-  width: 80%;
+  margin-bottom: 1.5rem;
 }
+
 .newsletter-mail {
   background-color: var(--color-newsletter-bg);
   width: 170px;
@@ -700,7 +703,29 @@ body {
   /* footer section  */
 
   .footer-container {
-    width: ;
+    width: 90%;
+    display: flex;
+    gap: 1;
+    justify-content: space-between;
+  }
+
+  .newsletter {
+    order: 3;
+    width: 30%;
+  }
+
+  .copyright {
+    order: 1;
+    width: 28%;
+  }
+
+  .help {
+    order: 2;
+    width: 35%;
+  }
+
+  .copyright-text{
+    margin-top: 0.5rem;
   }
 }
 
@@ -710,7 +735,7 @@ body {
 @media (min-width: 768px){
 
   body {
-    font-size: var(--fs-16);
+    font-size: var(--fs-14);
   }
 
   /* navigation bar styles for min-width md  */
@@ -762,5 +787,31 @@ body {
   .scroller {
     max-width: 950px;
     margin: 0 auto;
+  }
+
+  /* about us  */
+
+  .about-us {
+    padding-block: 2rem;
+  }
+
+  .about-us-container {
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-us-heading {
+  width: 100%;
+  }
+
+  .about-us-img {
+    width: 40%;
+    margin-left: 0;
+  }
+
+  .about-us-info {
+    width: 58%;
   }
 }
