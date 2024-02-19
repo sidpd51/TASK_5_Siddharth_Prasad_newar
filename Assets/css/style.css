@@ -88,8 +88,7 @@ a {
   font-size: var(--fs-20) !important;
 }
 .nav-container {
-  width: 90%;
-  margin: 0 auto;
+  margin: 0 3rem;
 }
 
 .inner-content {
@@ -384,6 +383,10 @@ a {
   height: 20px;
 }
 
+.logo-img-w-h-xs:hover {
+  cursor: pointer;
+}
+
 .client-showcase {
   background-color: var(--color-white-secondary);
   padding: 2rem 0;
@@ -624,8 +627,7 @@ a {
   }
 
   .nav-container {
-    width: 90%;
-    margin: 0 auto;
+    margin: 0 2rem !important;
   }
 
   .inner-content{
@@ -637,6 +639,7 @@ a {
     font-size: var(--fs-16);
     position: static;
     width: 60%;
+    margin-left: 0rem;
   }
 
   .hero-heading-black,
@@ -918,6 +921,10 @@ a {
   .navbar {
     font-size: var(--fs-16);
     padding-block: 1.5rem;
+  }
+
+  .nav-container {
+    margin: 0 2rem !important;
   }
 
   .navbar-brand {
@@ -1286,7 +1293,7 @@ a {
   }
 
   .copyright-list {
-    width: 80%;
+    width: 45%;
     font-size: 1.25rem;
   }
 }
