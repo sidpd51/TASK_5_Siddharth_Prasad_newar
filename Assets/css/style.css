@@ -946,7 +946,6 @@ a {
 
   .img-w-h-xs {
     width: 45px;
-    height: 30px;
     margin: 0 70px;
   }
 
@@ -955,7 +954,7 @@ a {
     content: "";
     position: absolute;
     top: 0;
-    width: 100px;
+    width: 150px;
     height: 100%;
     z-index: 2;
   }
@@ -968,13 +967,6 @@ a {
     margin-bottom: 2rem;
   }
 
-
-  /* ^ infinite-logo scroller  */
-
-  .scroller {
-    max-width: 950px;
-    margin: 0 auto;
-  }
 
   /*^ feature  */
 
