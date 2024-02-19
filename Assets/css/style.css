@@ -80,7 +80,10 @@ a {
   cursor: pointer;
 }
 
+
+
 /* navbar mobo */
+
 .navbar-brand {
   font-size: var(--fs-20) !important;
 }
@@ -91,6 +94,8 @@ a {
 }
 
 .hero-info {
+  width: 85%;
+  margin: 0 auto;
   font-size: var(--fs-12);
 }
 
@@ -369,6 +374,11 @@ a {
 
 
 /*^ client-showcase */
+
+.logo-img-w-h-xs {
+  width: 25px;
+  height: 20px;
+}
 
 .client-showcase {
   background-color: var(--color-white-secondary);
@@ -945,7 +955,8 @@ a {
 
 
   .img-w-h-xs {
-    width: 45px;
+    width: 40px;
+    height: 30px;
     margin: 0 70px;
   }
 
@@ -1045,6 +1056,11 @@ a {
 
   .about-us-info {
     width: 55%;
+  }
+
+  .logo-img-w-h-xs {
+    width: 45px;
+    height: 35px;
   }
 
   /*^ states  */
