@@ -87,6 +87,10 @@ a {
 .navbar-brand {
   font-size: var(--fs-20) !important;
 }
+.nav-container {
+  width: 90%;
+  margin: 0 auto;
+}
 
 .inner-content {
   position: relative;
@@ -619,6 +623,11 @@ a {
     align-items: center;
   }
 
+  .nav-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
   .inner-content{
     width: 90%;
     margin: 2rem auto !important;
@@ -908,7 +917,9 @@ a {
 
   .navbar {
     font-size: var(--fs-16);
+    padding-block: 1.5rem;
   }
+
   .navbar-brand {
     font-size: var(--fs-28) !important;
   }
@@ -921,8 +932,7 @@ a {
   }
 
   .inner-content{
-    width: 90%;
-    margin: 5rem auto !important;
+    margin: 3rem auto !important;
   }
 
   .hero-info {
