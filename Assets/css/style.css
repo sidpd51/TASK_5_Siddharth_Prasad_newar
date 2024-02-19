@@ -80,9 +80,15 @@ a {
   cursor: pointer;
 }
 
+
+
 /* navbar mobo */
+
 .navbar-brand {
   font-size: var(--fs-20) !important;
+}
+.nav-container {
+  margin: 0 3rem;
 }
 
 .inner-content {
@@ -91,6 +97,8 @@ a {
 }
 
 .hero-info {
+  width: 85%;
+  margin: 0 auto;
   font-size: var(--fs-12);
 }
 
@@ -130,94 +138,81 @@ a {
 }
 
 
-/* infinite-logo scroller  */
-
-.logo-slider {
-  background-color: var(--color-white-primary);
-  padding: 2rem 0rem;
-  text-align: center;
-
-}
-
-.logo-container {
-  background-color: var(--color-white-primary);
-  margin: 0 auto;
-  width: 80%;
-}
-
-.logo-slider-heading {
-  font-size: var(--fs-20);
-  color: var(--color-text-primary);
-}
-
-.logo-slider-paragraph {
-  color: var(--color-text-secondary);
-  margin-top: 1rem;
-}
-
-.tag-list {
-  margin: 0;
-  padding-inline: 0;
-  padding-top: 0;
-  list-style: none;
-  background-color: var(--color-white-primary);
-}
-
-.tag-list li {
-  background-color: var(--color-white-primary);
-  padding: 0.5rem;
-}
-
-.scroller {
-  max-width: 330px;
-  margin: 0 au8o;
-}
-
-.scroller__inner {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-block: 1rem;
-  gap: 1rem;
-}
-
-.scroller[data-animated="true"] {
-  overflow: hidden;
-  -webkit-mask: linear-gradient(
-    90deg,
-      transparent, 
-      white 40%,
-      white 80%,
-      transparent
-    );
-
-    mask: linear-gradient(
-      90deg,
-      transparent, 
-      white 40%,
-      white 80%,
-      transparent
-    );
-    
-}
-
-.scroller[data-animated="true"] .scroller__inner {
-  width: max-content;
-  flex-wrap: nowrap;
-  animation: scroll 50s linear infinite;
-}
-
-@keyframes scroll {
-  to {
-    transform: translate(-52% );
-  }
-}
-
-
 .img-w-h-xs {
   width: 25px;
   height: 20px;
+  margin: 0 20px;
 }
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  background-color: var(--color-white-primary);
+}
+
+.logos-title,
+.logos-subtitle {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logos-title {
+  font-size: var(--fs-20);
+  color: var(--color-heading-primary);
+  margin-bottom: 0.35rem;
+}
+
+.logos-subtitle {
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+}
+
+.logos-container {
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos-container::before,
+.logos-container::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logos-container::before{
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--color-white-primary));
+}
+
+.logos-container::after{
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--color-white-primary));
+}
+
+.logos-container:hover .logos-slider{
+  animation-play-state: paused;
+}
+
+.logos-slider {
+  display: inline-block;
+  animation: 15s slide infinite linear;
+}
+
+
 
 /*^ states  */
 
@@ -382,6 +377,15 @@ a {
 
 
 /*^ client-showcase */
+
+.logo-img-w-h-xs {
+  width: 25px;
+  height: 20px;
+}
+
+.logo-img-w-h-xs:hover {
+  cursor: pointer;
+}
 
 .client-showcase {
   background-color: var(--color-white-secondary);
@@ -602,7 +606,7 @@ a {
 
 
 
-/* ^ tab screen  */
+/* ! tab screen  */
 
 @media (min-width: 576px) and (max-width: 767px){
 
@@ -622,6 +626,10 @@ a {
     align-items: center;
   }
 
+  .nav-container {
+    margin: 0 2rem !important;
+  }
+
   .inner-content{
     width: 90%;
     margin: 2rem auto !important;
@@ -631,6 +639,7 @@ a {
     font-size: var(--fs-16);
     position: static;
     width: 60%;
+    margin-left: 0rem;
   }
 
   .hero-heading-black,
@@ -650,6 +659,29 @@ a {
     display: flex;
     width: 5%;
   }
+
+
+  .img-w-h-xs {
+    width: 28px;
+    height: 25px;
+    margin: 0 30px;
+  }
+
+  .logos-container::before,
+  .logos-container::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .logos-subtitle {
+    margin-bottom: 1.5rem;
+  }
+
+
 
 
   /*^ states  */
@@ -869,17 +901,12 @@ a {
 }
 
 
-/*^ large screens  */
+/*! large screens  */
 
 @media (min-width: 768px){
 
   body {
     font-size: var(--fs-16);
-  }
-
-  .img-w-h-xs {
-    width: 40px;
-    height: 30px;
   }
 
   .btn {
@@ -893,7 +920,13 @@ a {
 
   .navbar {
     font-size: var(--fs-16);
+    padding-block: 1.5rem;
   }
+
+  .nav-container {
+    margin: 0 2rem !important;
+  }
+
   .navbar-brand {
     font-size: var(--fs-28) !important;
   }
@@ -906,8 +939,7 @@ a {
   }
 
   .inner-content{
-    width: 90%;
-    margin: 5rem auto !important;
+    margin: 3rem auto !important;
   }
 
   .hero-info {
@@ -934,12 +966,35 @@ a {
     width: 5%;
   }
 
-  /* ^ infinite-logo scroller  */
-
-  .scroller {
-    max-width: 950px;
-    margin: 0 auto;
+  .logos {
+    padding-block: 4rem;
   }
+
+
+  .img-w-h-xs {
+    width: 40px;
+    height: 30px;
+    margin: 0 70px;
+  }
+
+  .logos-container::before,
+  .logos-container::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .logos-title {
+    font-size: var(--fs-28);
+  }
+
+  .logos-subtitle {
+    margin-bottom: 2rem;
+  }
+
 
   /*^ feature  */
 
@@ -1018,6 +1073,11 @@ a {
 
   .about-us-info {
     width: 55%;
+  }
+
+  .logo-img-w-h-xs {
+    width: 45px;
+    height: 35px;
   }
 
   /*^ states  */
@@ -1233,7 +1293,7 @@ a {
   }
 
   .copyright-list {
-    width: 80%;
+    width: 45%;
     font-size: 1.25rem;
   }
 }
@@ -1244,6 +1304,38 @@ a {
 @media (min-width: 1080px){
 
   /*^ product-showcase section  */
+
+  .img-w-h-xs {
+    height: 50px;
+    width: 50px;
+  }
+  
+
+  inner-content{
+    width: 90%;
+    margin: 5rem auto !important;
+  }
+
+  .feature-container {
+    width: 75%;
+  }
+
+  .about-us-container {
+    width: 90%;
+  }
+
+  .states-container {
+    width: 90%;
+  }
+
+  .client-showcase-container {
+    width: 70%;
+  }
+
+  .client-showcase-img {
+    max-width: 460px;
+    height: auto;
+  }
 
   .product-showcase {
     padding: 3rem 0;
